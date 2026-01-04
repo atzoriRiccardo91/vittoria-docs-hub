@@ -96,8 +96,9 @@ const NavSection = ({ item, activeHref, onNavigate }: NavSectionProps) => {
               key={child.href}
               onClick={() => child.href && onNavigate(child.href)}
               className={cn(
-                "docs-nav-item w-full text-left",
-                activeHref === child.href && "docs-nav-item-active"
+                "flex items-center gap-2 px-4 py-2 text-sm text-sidebar-foreground/80 w-full text-left",
+                "hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors rounded-md",
+                activeHref === child.href && "bg-sidebar-accent text-sidebar-primary font-medium"
               )}
             >
               {child.title}
@@ -116,7 +117,7 @@ interface SidebarProps {
 
 const Sidebar = ({ activeHref, onNavigate }: SidebarProps) => {
   return (
-    <aside className="docs-sidebar scrollbar-thin">
+    <aside className="fixed left-0 top-0 h-screen w-[280px] bg-sidebar overflow-y-auto border-r border-sidebar-border scrollbar-thin">
       {/* Logo */}
       <div className="flex items-center gap-3 px-6 py-5 border-b border-sidebar-border">
         <div className="w-8 h-8 rounded-lg bg-sidebar-primary flex items-center justify-center">

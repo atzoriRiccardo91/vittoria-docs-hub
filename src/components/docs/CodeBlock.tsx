@@ -26,7 +26,7 @@ const CodeBlock = ({ code, language = "typescript", title }: CodeBlockProps) => 
         </div>
       )}
       <div className="relative">
-        <pre className="docs-code-block">
+        <pre className="bg-docs-code text-sidebar-foreground rounded-lg p-4 overflow-x-auto font-mono text-sm">
           <code>{code}</code>
         </pre>
         <Button

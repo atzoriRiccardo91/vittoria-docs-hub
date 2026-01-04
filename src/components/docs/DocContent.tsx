@@ -1,10 +1,10 @@
 import Breadcrumb from "./Breadcrumb";
 import CodeBlock from "./CodeBlock";
-import { Link2, AlertCircle, CheckCircle, Info } from "lucide-react";
+import { Link2, CheckCircle, Info } from "lucide-react";
 
 const DocContent = () => {
   return (
-    <article className="docs-content animate-fade-in">
+    <article className="max-w-4xl mx-auto px-8 py-12 animate-fade-in">
       <Breadcrumb
         items={[
           { label: "Docs", href: "/" },
@@ -39,7 +39,7 @@ const DocContent = () => {
       <section id="overview" className="mb-12">
         <h2 className="group flex items-center gap-2 text-2xl font-display font-semibold text-foreground mb-4">
           <span>Cos'è questo progetto?</span>
-          <a href="#overview" className="docs-heading-anchor">
+          <a href="#overview" className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-accent">
             <Link2 className="w-5 h-5" />
           </a>
         </h2>
@@ -49,7 +49,7 @@ const DocContent = () => {
           la gestione dei dati e l'integrazione con servizi esterni.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          La piattaforma è progettata seguendo i principi di <code className="docs-inline-code">clean architecture</code> e
+          La piattaforma è progettata seguendo i principi di <code className="bg-docs-inline-code text-primary px-1.5 py-0.5 rounded text-sm font-mono">clean architecture</code> e
           offre un'esperienza di sviluppo ottimale grazie a strumenti moderni e best practices.
         </p>
       </section>
@@ -58,7 +58,7 @@ const DocContent = () => {
       <section id="installation" className="mb-12">
         <h2 className="group flex items-center gap-2 text-2xl font-display font-semibold text-foreground mb-4">
           <span>Installazione</span>
-          <a href="#installation" className="docs-heading-anchor">
+          <a href="#installation" className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-accent">
             <Link2 className="w-5 h-5" />
           </a>
         </h2>
@@ -101,7 +101,7 @@ await client.connect();`}
       <section id="features" className="mb-12">
         <h2 className="group flex items-center gap-2 text-2xl font-display font-semibold text-foreground mb-4">
           <span>Funzionalità Principali</span>
-          <a href="#features" className="docs-heading-anchor">
+          <a href="#features" className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-accent">
             <Link2 className="w-5 h-5" />
           </a>
         </h2>
@@ -146,7 +146,7 @@ await client.connect();`}
       </section>
 
       {/* Next steps */}
-      <section className="mt-12 p-6 rounded-lg bg-gradient-hero text-sidebar-foreground">
+      <section className="mt-12 p-6 rounded-lg bg-gradient-to-br from-sidebar to-primary text-sidebar-foreground">
         <h3 className="font-display font-semibold text-xl mb-2">Prossimi passi</h3>
         <p className="text-sidebar-foreground/80 mb-4">
           Ora che hai installato il sistema, continua con la configurazione dell'ambiente

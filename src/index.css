@@ -55,10 +55,6 @@
     --docs-header-height: 64px;
     --docs-code-bg: 224 40% 12%;
     --docs-inline-code-bg: 220 30% 94%;
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(224 55% 18%) 0%, hsl(224 55% 28%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(210 100% 50%) 0%, hsl(220 100% 60%) 100%);
   }
 
   .dark {
@@ -108,97 +104,9 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', system-ui, sans-serif;
-    @apply font-semibold tracking-tight;
-  }
-}
-
-@layer components {
-  .docs-container {
-    @apply flex min-h-screen;
-  }
-
-  .docs-sidebar {
-    @apply fixed left-0 top-0 h-screen w-[var(--docs-nav-width)] bg-sidebar overflow-y-auto;
-    @apply border-r border-sidebar-border;
-  }
-
-  .docs-main {
-    @apply ml-[var(--docs-nav-width)] flex-1 min-h-screen;
-  }
-
-  .docs-content {
-    @apply max-w-4xl mx-auto px-8 py-12;
-  }
-
-  .docs-nav-item {
-    @apply flex items-center gap-2 px-4 py-2 text-sm text-sidebar-foreground/80;
-    @apply hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors rounded-md;
-  }
-
-  .docs-nav-item-active {
-    @apply bg-sidebar-accent text-sidebar-primary font-medium;
-  }
-
-  .docs-code-block {
-    @apply bg-[hsl(var(--docs-code-bg))] text-sidebar-foreground rounded-lg p-4 overflow-x-auto;
-    @apply font-mono text-sm;
-  }
-
-  .docs-inline-code {
-    @apply bg-[hsl(var(--docs-inline-code-bg))] text-primary px-1.5 py-0.5 rounded text-sm font-mono;
-  }
-
-  .docs-heading-anchor {
-    @apply opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-accent;
-  }
-
-  .vittoria-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
-  .vittoria-wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 60px;
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
-  }
-
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .scrollbar-thin {
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--sidebar-border)) transparent;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--sidebar-border));
-    border-radius: 3px;
+    @apply font-display font-semibold tracking-tight;
   }
 }
