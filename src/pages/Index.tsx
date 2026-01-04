@@ -33,7 +33,7 @@ const Index = () => {
       />
 
       {/* Main Content */}
-      <div className="lg:ml-sidebar">
+      <div className="lg:ml-[280px]">
         <Header onMenuToggle={() => setMobileMenuOpen(true)} />
         <main>
           <DocContent />
